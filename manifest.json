@@ -1,0 +1,62 @@
+{
+  "name": "Cookie助手",
+  "description": "Cookie助手",
+  "version": "1.0",
+  "manifest_version": 3,
+  "sandbox": {
+    "pages": [
+      "/page/cookie.html"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "webNavigation",
+    "scripting",
+    "contextMenus",
+    "background",
+    "cookies",
+    "notifications",
+    "commands",
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "/asset/logo/logo-16.png",
+    "32": "/asset/logo/logo-32.png",
+    "48": "/asset/logo/logo-48.png",
+    "128": "/asset/logo/logo-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/asset/logo/logo-16.png",
+      "32": "/asset/logo/logo-32.png",
+      "48": "/asset/logo/logo-48.png",
+      "128": "/asset/logo/logo-128.png"
+    }
+  },
+  "commands": {
+    "cookie-dialog": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "打开Cookie助手系统页面"
+    },
+    "inject-script": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "测试"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

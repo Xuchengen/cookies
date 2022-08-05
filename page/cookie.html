@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie助手</title>
+    <link rel="stylesheet" href="../asset/lib/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="../asset/lib/easyui/themes/icon.css">
+    <style>
+        #main-pre {
+            padding: 5px;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            overflow: hidden;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-all;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body class="easyui-layout" style="width: 100%;height: 100%">
+<div data-options="region:'west',split:true,hideCollapsedContent:false" title="网站列表" style="width:15%;height: 100%">
+    <div id="main-menu"></div>
+</div>
+<div class="easyui-layout" data-options="region:'center',border:false" style="width: 85%;height: 60%">
+    <div class="easyui-layout" style="width: 100%;height: 100%">
+        <div data-options="region:'center',border:true" title="Cookie表格" style="width: 100%;height: 65%">
+            <table id="main-table" style="width: 100%;height: 100%"></table>
+            <div id="row-menu" class="easyui-menu" style="width:150px;">
+                <div id="copy-value">Copy Value</div>
+                <div id="copy-row">Copy Row</div>
+                <div id="copy-table">Copy Table</div>
+            </div>
+        </div>
+        <div data-options="region:'south',border:true,split:true,collapsible:false" style="width: 100%;height: 35%">
+            <div style="width: 100%;height: 100%;overflow: hidden;">
+                <div style="padding: 5px;margin: 0;">
+                    <span>
+                        <label style="user-select: none;">
+                            <strong>Cookie Value</strong>
+                            <input id="value-checkbox" type="checkbox" style="vertical-align: bottom;">显示已编码网址
+                        </label>
+                    </span>
+                </div>
+                <input id="value-input" type="hidden">
+                <pre id="main-pre"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../asset/lib/easyui/jquery.min.js"></script>
+<script src="../asset/lib/easyui/jquery.easyui.min.js"></script>
+<script src="../asset/lib/easyui/locale/easyui-lang-zh_CN.js"></script>
+<script src="./js/cookie.js"></script>
+</body>
+</html>
